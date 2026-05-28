@@ -1,9 +1,8 @@
-# ─── S3 BUCKET ─────────────────────────────────────────────────────────────────
 resource "aws_s3_bucket" "storage" {
-  bucket = "mi-bucket-prueba2-${random_id.suffix.hex}"
+  bucket = var.bucket_name
 
   tags = {
-    Name        = "bucket-prueba2"
+    Name        = var.bucket_name_tag
     Environment = "dev"
   }
 }
