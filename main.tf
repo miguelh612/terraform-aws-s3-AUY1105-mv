@@ -1,5 +1,5 @@
 resource "aws_s3_bucket" "storage" {
-  bucket = var.bucket_name
+  bucket = "mi-bucket-prueba2-${random_id.suffix.hex}"
 
   tags = {
     Name        = var.bucket_name_tag
