@@ -1,11 +1,11 @@
-resource "aws_s3_bucket" "storage" {
-  bucket = "mi-bucket-prueba2-${random_id.suffix.hex}"
+# resource "aws_s3_bucket" "storage" {
+#   bucket = "mi-bucket-prueba2-${random_id.suffix.hex}"
 
-  tags = {
-    Name        = var.bucket_name_tag
-    Environment = "dev"
-  }
-}
+#   tags = {
+#     Name        = var.bucket_name_tag
+#     Environment = "dev"
+#   }
+# }
 
 resource "aws_s3_bucket_versioning" "storage" {
   bucket = aws_s3_bucket.storage.id
